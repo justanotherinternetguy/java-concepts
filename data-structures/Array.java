@@ -1,27 +1,46 @@
-// Arrays in java
+import java.util.ArrayList; // ArrayList is a RESIZABLE array
+import java.util.Collections; // Collections for
 
-class Array {
-	public static void main(String[] args) {
-		// 1-D Array
-		int[] intArr = {1, 2, 3, 4, 5};
 
-	  	// Iterate through 1-D Array
-		for (int i = 0; i < intArr.length; i++) {
-			System.out.print(intArr[i]);
-		}
-			System.out.print("\n");
+public class Main {
+	public static void main (String[] args) {
 
-		// 2-D Array
-		int[][] twoDimensionalArr = { {9, 2, 4, 8, 1, 2, 8},{8, 3, 9, 3, 4} };
+		// 1-D array
+		// A ARRAYS BELOW DYNAMIC (no specific size upon dec.)
+		int[] oneD = {8, 7, 6, 5, 4, 3, 2, 1};
 
-		// Getting index
-		// System.out.println(twoDimensionalArr[0][0]);
+		// 2-D array
+		int[][] twoD = {{9, 8, 7}, {6, 5, 4, 3}};
 
-		// Iterate through 2-D Array
-		for (int j = 0; j < twoDimensionalArr.length; j++) {
-			for (int k = 0; k < twoDimensionalArr[j].length; k++) {
-				System.out.print(twoDimensionalArr[j][k]);
-			}
-		}
+		
+		ArrayList<String> cars = new ArrayList<String>(); // create object
+
+		cars.add("bmw");
+		cars.add("ferrari");
+		cars.add("honda");
+
+		System.out.println(cars);
+		System.out.println(cars.get(1)); // get a val from index / returns "ferrari"
+
+		cars.set(0, "lancia"); // modify bmw --> lancia
+		System.out.println(cars.get(0));
+
+		cars.remove(0); // removes lancia
+		System.out.println(cars);
+		System.out.println(cars.size()); // return 2
+
+
+		ArrayList<Integer> ints = new ArrayList<Integer>();
+		ints.add(9);
+		ints.add(8);
+		ints.add(7);
+		ints.add(6);
+		ints.add(5);
+		ints.add(4);
+		System.out.println(ints);
+		Collections.sort(ints); // sort ints
+		System.out.println(ints);
+
+		
 	}
 }
